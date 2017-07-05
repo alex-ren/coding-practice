@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/coding-practice.iml" filepath="$PROJECT_DIR$/.idea/modules/coding-practice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/leetcode/leetcode.iml" filepath="$PROJECT_DIR$/.idea/modules/leetcode/leetcode.iml" group="leetcode" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/leetcode/leetcode_main.iml" filepath="$PROJECT_DIR$/.idea/modules/leetcode/leetcode_main.iml" group="leetcode" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/leetcode/leetcode_test.iml" filepath="$PROJECT_DIR$/.idea/modules/leetcode/leetcode_test.iml" group="leetcode" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mytest/merge/merge.iml" filepath="$PROJECT_DIR$/.idea/modules/mytest/merge/merge.iml" group="mytest/merge" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mytest/merge/merge_main.iml" filepath="$PROJECT_DIR$/.idea/modules/mytest/merge/merge_main.iml" group="mytest/merge" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mytest/merge/merge_test.iml" filepath="$PROJECT_DIR$/.idea/modules/mytest/merge/merge_test.iml" group="mytest/merge" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mytest/mytest.iml" filepath="$PROJECT_DIR$/.idea/modules/mytest/mytest.iml" group="mytest" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mytest/mytest_main.iml" filepath="$PROJECT_DIR$/.idea/modules/mytest/mytest_main.iml" group="mytest" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mytest/mytest_test.iml" filepath="$PROJECT_DIR$/.idea/modules/mytest/mytest_test.iml" group="mytest" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/leetcode/question01/question01.iml" filepath="$PROJECT_DIR$/.idea/modules/leetcode/question01/question01.iml" group="leetcode/question01" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/leetcode/question01/question01_main.iml" filepath="$PROJECT_DIR$/.idea/modules/leetcode/question01/question01_main.iml" group="leetcode/question01" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/leetcode/question01/question01_test.iml" filepath="$PROJECT_DIR$/.idea/modules/leetcode/question01/question01_test.iml" group="leetcode/question01" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/shared/shared.iml" filepath="$PROJECT_DIR$/.idea/modules/shared/shared.iml" group="shared" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/shared/shared_main.iml" filepath="$PROJECT_DIR$/.idea/modules/shared/shared_main.iml" group="shared" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/shared/shared_test.iml" filepath="$PROJECT_DIR$/.idea/modules/shared/shared_test.iml" group="shared" />
+    </modules>
+  </component>
+</project>
