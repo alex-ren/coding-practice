@@ -1,8 +1,3 @@
-// Used for the Application plugin
-// Usage: gradle run
-mainClassName = 'org.plaintech.coding.Codec'
-
-
 dependencies {
     // https://mvnrepository.com/artifact/org.testng/testng
     testCompile group: 'org.testng', name: 'testng', version: '6.14.3'

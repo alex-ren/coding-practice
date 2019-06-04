@@ -10,7 +10,11 @@ public class TestCodec {
 
     @Test
     public void test01() {
+        String url = "https://leetcode.com/problems/design-tinyurl";
 
-        Assert.assertEquals(1, 2);
+        System.out.println("url is " + url);
+        Codec codec = new Codec();
+        String decode = codec.decode(codec.encode(url));
+        Assert.assertEquals(url, decode);
     }
 }

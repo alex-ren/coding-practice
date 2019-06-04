@@ -37,15 +37,15 @@ public class Codec {
     // Decodes a shortened URL to its original URL.
     public String decode(String shortUrl) {
         String key = shortUrl.replace(tinyUrlPrefix, "");
-        System.out.println("key is " + key);
+        // System.out.println("key is " + key);
         return map.get(key);
     }
 
     public static void main(String[] args) {
         Codec codec = new Codec();
         String encode = codec.encode("xxx");
-        System.out.println("encode is " + encode);
-        System.out.println("decode is " + codec.decode(encode));
+        // System.out.println("encode is " + encode);
+        // System.out.println("decode is " + codec.decode(encode));
 
     }
 }
