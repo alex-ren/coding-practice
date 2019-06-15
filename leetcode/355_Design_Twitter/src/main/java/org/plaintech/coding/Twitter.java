@@ -7,16 +7,13 @@ import java.time.Instant;
 
 class Twitter {
     static class Item {
-        Date left;
-        int right;
-        Timestamp timestamp;
-        Instant instant;
+        static int gCount = 0;
+        int count;
+        int id;
 
-        public Item(Date aLeft, Timestamp aTimestamp, int aRight) {
-            left = aLeft;
-            timestamp = aTimestamp;
-            right = aRight;
-            instant = Instant.now();
+        public Item(int aId) {
+            count = ++gCount;
+            id = aId;
         }
     }
 
@@ -41,7 +38,7 @@ class Twitter {
         Timestamp timestamp = new Timestamp(System.currentTimeMillis());
         System.out.println("Timestamp is " + timestamp);
 
-        Item p = new Item(now, timestamp, tweetId);
+        Item p = new Item(tweetId);
 
         List<Item> tweets = userTweets.get(userId);
         if (null == tweets) {
@@ -75,14 +72,11 @@ class Twitter {
 
         Item p = xs.get(0);
 
-        System.out.println("To be inserted is " + p.left.getTime() + " id is " + p.right);
-
         ListIterator<List<Item>> iter = xss.listIterator();
         while (iter.hasNext()) {
             List<Item> cur = iter.next();
-            System.out.println("cur.get(0).left is " + cur.get(0).left.getTime() + " id is " + cur.get(0).right);
 
-            if (p.instant.isAfter(cur.get(0).instant)) {
+            if (p.count > cur.get(0).count) {
                 iter.previous();
                 iter.add(xs);
                 return;
@@ -123,8 +117,8 @@ class Twitter {
                     break;
                 }
                 Item tweet = tweets.remove(0);
-                res.add(tweet.right);
-                System.out.println("Element is " + tweet.right);
+                res.add(tweet.id);
+                System.out.println("Element is " + tweet.id);
 
                 insert(tweetslist, tweets);
             } else {
