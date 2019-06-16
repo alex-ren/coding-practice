@@ -2,8 +2,6 @@ package org.plaintech.coding;
 
 
 import java.util.*;
-import java.sql.Timestamp;
-import java.time.Instant;
 
 class Twitter {
     static class Item {
@@ -32,12 +30,6 @@ class Twitter {
 
     /** Compose a new tweet. */
     public void postTweet(int userId, int tweetId) {
-        Date now = new Date();
-        System.out.println("Date is " + now);
-        System.out.println("Milli is " + now.getTime());
-        Timestamp timestamp = new Timestamp(System.currentTimeMillis());
-        System.out.println("Timestamp is " + timestamp);
-
         Item p = new Item(tweetId);
 
         List<Item> tweets = userTweets.get(userId);
@@ -65,7 +57,6 @@ class Twitter {
     // xss not null
     // xs not null
     private void insert(List<List<Item>> xss, List<Item> xs) {
-        System.out.println("insert");
         if (xs.isEmpty()) {
             return;
         }
@@ -89,7 +80,6 @@ class Twitter {
 
     /** Retrieve the 10 most recent tweet ids in the user's news feed. Each item in the news feed must be posted by users who the user followed or by the user herself. Tweets must be ordered from most recent to least recent. */
     public List<Integer> getNewsFeed(int userId) {
-        System.out.println("getNewFeed");
 
         List<List<Item>> tweetslist = new LinkedList<List<Item>>();
         insert(tweetslist, getOwnTweets(userId));
@@ -104,7 +94,6 @@ class Twitter {
 
         List<Integer> res = new LinkedList<>();
 
-        System.out.println("getNewFeed before going to loop");
         for (int i = 0; i < 10; i++) {
             if (tweetslist.isEmpty()) {
                 break;
@@ -118,15 +107,12 @@ class Twitter {
                 }
                 Item tweet = tweets.remove(0);
                 res.add(tweet.id);
-                System.out.println("Element is " + tweet.id);
 
                 insert(tweetslist, tweets);
             } else {
                 break;
             }
         }
-
-        System.out.println("newsfeed is " + res);
 
         return res;
 

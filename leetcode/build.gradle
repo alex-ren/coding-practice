@@ -1,14 +1,15 @@
-subprojects {
-    apply plugin: 'application'
-}
+// Specified in root project
+// subprojects {
+//     apply plugin: 'application'
+// }
 
 group 'coding-practice.leetcode'
 version '1.0'
 
-apply plugin: 'java'
+// apply plugin: 'java'
 
 sourceCompatibility = 1.8
 
-repositories {
-    mavenCentral()
-}
+// repositories {
+//     mavenCentral()
+// }

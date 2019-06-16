@@ -1,14 +1,18 @@
 subprojects {
     apply plugin: 'java'
+    apply plugin: 'application'
     // apply plugin: 'eclipse-wtp'
 
     repositories {
        mavenCentral()
     }
 
-    // dependencies {
-    //     testCompile 'junit:junit:4.12'
-    // }
+    dependencies {
+        compile 'org.apache.logging.log4j:log4j-slf4j-impl:2.11.2'
+
+        // https://mvnrepository.com/artifact/org.testng/testng
+        testCompile group: 'org.testng', name: 'testng', version: '6.14.3'
+    }
 
     version = '1.0'
 
@@ -22,4 +26,19 @@ subprojects {
             options.compilerArgs << "-Xlint:unchecked"
         }
     }
+
+    test {
+        // enable TestNG support (default is JUnit)
+        useTestNG()
+
+        // listen to events in the test execution lifecycle
+        beforeTest { descriptor ->
+            logger.lifecycle("Running test: " + descriptor)
+        }
+
+         testLogging {
+             outputs.upToDateWhen {false}
+             showStandardStreams = true
+         }
+     }
 }

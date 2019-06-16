@@ -1,15 +1,15 @@
 // Apply the java-library plugin to add support for Java Library
 apply plugin: 'java-library'
-apply plugin: 'application'
+// apply plugin: 'application'
 
 mainClassName = 'org.plaintech.utils.ArrayHeap'
 
-// In this section you declare where to find the dependencies of your project
-repositories {
-    // Use jcenter for resolving your dependencies.
-    // You can declare any Maven/Ivy/file repository here.
-    jcenter()
-}
+// // In this section you declare where to find the dependencies of your project
+// repositories {
+//     // Use jcenter for resolving your dependencies.
+//     // You can declare any Maven/Ivy/file repository here.
+//     jcenter()
+// }
 
 dependencies {
     // This dependency is exported to consumers, that is to say found on their compile classpath.
@@ -17,33 +17,6 @@ dependencies {
 
     // // This dependency is used internally, and not exposed to consumers on their own compile classpath.
     // implementation 'com.google.guava:guava:21.0'
-
-    // https://mvnrepository.com/artifact/org.testng/testng
-    testCompile group: 'org.testng', name: 'testng', version: '6.14.3'
-
-    compile 'org.apache.logging.log4j:log4j-slf4j-impl:2.11.2'
-}
-
-test {
-    // enable TestNG support (default is JUnit)
-    useTestNG()
-
-    // // listen to events in the test execution lifecycle
-    // beforeTest { descriptor ->
-    //     logger.lifecycle("Running test: " + descriptor)
-    // }
-
-    // // listen to standard out and standard error of the test JVM(s)
-    // onOutput { descriptor, event ->
-    //     logger.lifecycle("Test: " + descriptor + " produced standard out/err: " + event.message )
-    // }
-
-    test {
-        testLogging {
-            outputs.upToDateWhen {false}
-            showStandardStreams = true
-        }
-    }
 }
 
 
