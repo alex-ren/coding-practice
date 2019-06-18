@@ -60,4 +60,11 @@ public class Summary {
         Set<Integer> set2 = new HashSet<Integer>(Arrays.asList(1, 2, 3));
     }
 
+    void useStringBuffer() {
+        StringBuffer buf = new StringBuffer();
+        buf.append(1);
+        buf.append("hello");
+        buf.toString();
+    }
+
 }
