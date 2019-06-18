@@ -1,5 +1,6 @@
 include "leetcode:question01", "mytest:merge", "shared",
         ":leetcode:050_Pow_x_n",
+        ":leetcode:200_Number_of_Islands",
         ":leetcode:355_Design_Twitter",
         ":leetcode:376_Wiggle_Subsequence",
         ":leetcode:457_Circular_Array_Loop",
