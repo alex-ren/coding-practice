@@ -5,5 +5,6 @@ include "leetcode:question01", "mytest:merge", "shared",
         ":leetcode:376_Wiggle_Subsequence",
         ":leetcode:457_Circular_Array_Loop",
         ":leetcode:535_Encode_and_Decode_TinyURL",
+        ":leetcode:547_Friend_Circles",
         ":leetcode:880_Decoded_String_at_Index"
 
