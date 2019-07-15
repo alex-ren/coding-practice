@@ -1,0 +1,4 @@
+// Used for the Application plugin
+// Usage: gradle run
+mainClassName = 'org.plaintech.coding.Permutation'
+
