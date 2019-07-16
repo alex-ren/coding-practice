@@ -1,5 +1,7 @@
 include "leetcode:question01", "mytest:merge", "shared",
+        ":leetcode:007_Reverse_Integer",
         ":leetcode:046_Permutation",
+        ":leetcode:049_Group_Anagrams",
         ":leetcode:050_Pow_x_n",
         ":leetcode:166_Fraction_to_Recurring_Decimal",
         ":leetcode:200_Number_of_Islands",
